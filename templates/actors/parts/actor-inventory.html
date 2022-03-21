@@ -44,7 +44,7 @@
 				{{/unless}}
 			{{/if}}
 
-			{{#if ../slotSetting}}
+			{{#if ../slotbasedinventory}}
 				<div class="item-detail item-weight">Slots</div>
 				{{else}} 
                 <div class="item-detail item-weight">{{localize "DND5E.Weight"}}</div>
@@ -148,23 +148,10 @@
 </ol>
 
 {{#if isCharacter }}
-{{#with data.attributes.encumbs}}
+{{#with data.attributes.encumbrance}}
 <div class="encumbrance {{#if encumbered}}encumbered{{/if}}">
     <span class="encumbrance-bar" style="width:{{pct}}%"></span>
     <span class="encumbrance-label">{{value}} / {{max}}</span>
-    <i class="encumbrance-breakpoint encumbrance-33 arrow-up"></i>
-    <i class="encumbrance-breakpoint encumbrance-33 arrow-down"></i>
-    <i class="encumbrance-breakpoint encumbrance-66 arrow-up"></i>
-    <i class="encumbrance-breakpoint encumbrance-66 arrow-down"></i>
-</div>
-{{/with}}
-{{/if}}
-
-{{#if isCharacter }}
-{{#with data.attributes.inventorys}}
-<div class="encumbrance {{#if encumbered}}encumbered{{/if}}">
-    <span class="encumbrance-bar" style="width:{{percent}}%"></span>
-    <span class="encumbrance-label">{{value}} / {{max}} Slots</span>
 </div>
 {{/with}}
 {{/if}}

@@ -2,11 +2,18 @@
 	"name": "darksheet",
 	"title": "darksheet 5e",
 	"description": "Darker Dungeons replacement for the default 5e actor sheet",
-	"version": "3.4.1",
-	"author": "Handyfon#1802",
-	"esmodules": ["darksheet.js", "templates.js"],
-	"styles": ["css/darksheet.css"],
-	"systems": ["dnd5e"],
+	"version": "3.4.2",
+	"author": "balane",
+	"esmodules": [
+		"darksheet.js",
+		"templates.js"
+	],
+	"styles": [
+		"css/darksheet.css"
+	],
+	"systems": [
+		"dnd5e"
+	],
 	"packs": [
 		{
 			"name": "darkerdungeons",
@@ -20,34 +27,44 @@
 			"label": "Darkitems",
 			"system": "dnd5e",
 			"path": "./packs/darkitems.db",
-			"entity": "Item" 
+			"entity": "Item"
 		},
 		{
 			"name": "darkmacros",
 			"label": "Darksheet Macros",
 			"system": "dnd5e",
 			"path": "./packs/darksheet-macros.db",
-			"entity": "Macro" 
+			"entity": "Macro"
 		},
 		{
 			"name": "afflictions",
 			"label": "Afflictions",
 			"system": "dnd5e",
 			"path": "./packs/afflictions.db",
-			"entity": "Item" 
+			"entity": "Item"
 		},
 		{
 			"name": "abstractrewards",
 			"label": "Abstract Rewards",
 			"system": "dnd5e",
 			"path": "./packs/abstract-rewards.db",
-			"entity": "Item" 
+			"entity": "Item"
 		}
 	],
-	 "socket": true,
-    "url": "https://github.com/Handyfon/FDarksheet/tree/master",
-    "manifest": "https://raw.githubusercontent.com/Handyfon/Darksheet/master/module.json",
-    "download": "https://github.com/Handyfon/Darksheet/raw/master/darksheet.zip",
+	"socket": true,
+	"url": "https://github.com/balane3/Darksheet",
+	"manifest": "https://raw.githubusercontent.com/balane3/Darksheet/master/module.json",
+	"download": "https://github.com/Handyfon/Darksheet/raw/master/darksheet.zip",
 	"minimumCoreVersion": "0.8.9",
-	"compatibleCoreVersion": "0.8.9"
+	"compatibleCoreVersion": "0.8.9",
+	"dependencies": [
+		{
+			"name": "lib-wrapper",
+			"manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/latest/download/module.json"
+		},
+		{
+			"name": "dnd5e",
+			"type": "system"
+		}
+	]
 }
